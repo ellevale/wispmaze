@@ -244,7 +244,7 @@
   cv.addEventListener('touchend',endTouch);cv.addEventListener('touchcancel',endTouch);
 
   // ---------- audio ----------
-  var actx=null,muted=false,bgm=document.getElementById('bgm');if(bgm)bgm.volume=0.20;
+  var actx=null,muted=false,bgm=document.getElementById('bgm');if(bgm)bgm.volume=0.80;
   function audioInit(){try{if(!actx)actx=new (window.AudioContext||window.webkitAudioContext)();
     if(actx.state==='suspended')actx.resume();}catch(e){}}
   function playMusic(){if(!bgm||muted)return;var p=bgm.play();if(p&&p.catch)p.catch(function(){});}
